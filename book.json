@@ -1,0 +1,25 @@
+{
+    "title": "《Elysia》",
+    "author": "ChenGuo",
+    "description": "记录学习、工作期间学习到的知识，见证自己的成长😄",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "structure": {
+        "readme": "README.md"
+    },
+    "plugins": [ 
+        "expandable-chapters",
+        "back-to-top-button"
+    ],
+    "pluginsConfig": {
+        
+    },
+    "links": {
+        "sidebar": {
+            "本书github站点": "https://github.com/chenguo-design/Elysia"
+        }
+    },
+    "styles":{
+        "website":"./styles/elysia-common.css"
+    }
+}
