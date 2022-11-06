@@ -1,4 +1,4 @@
-# GitBook使用教程
+# GitBook使用文档
 
 ## 1.环境安装
 
@@ -112,7 +112,7 @@ bui# Summary
 其中章节通过缩进进行约束，末尾的链接是相对电子书对应的文件夹的根目录
 修改后登录localhost:4000查看效果如下：
 
-
+![image-20221023220033498](E:\GitBook\Elysia\images\gitbook\image-20221023220033498.png)
 
 
 #### 2.2.2 目录折叠
@@ -139,7 +139,7 @@ info: >> plugin "expandable-chapters" installed with success
 ```
 从新执行`gitbook serve`命令，发现目录已经可以折叠了，效果如下
 
-![](https://raw.githubusercontent.com/chenguo-design/images-repo/master/Elysia/image-20221023221236249.png)
+![image-20221023221236249](E:\GitBook\Elysia\images\gitbook\image-20221023221236249.png)
 
 #### 2.2.3 分隔符
 
@@ -160,7 +160,7 @@ info: >> plugin "expandable-chapters" installed with success
 
 效果如下
 
-![](https://raw.githubusercontent.com/chenguo-design/images-repo/master/Elysia/image-20221023222803103.png)
+![image-20221023222803103](E:\GitBook\Elysia\images\gitbook\image-20221023222803103.png)
 
 不仅可以将功能相关的功能导航放在一起，同时使内容看上去不那么臃肿。
 
@@ -179,7 +179,7 @@ info: >> plugin "expandable-chapters" installed with success
 ```
 效果如下图：
 
-![](https://raw.githubusercontent.com/chenguo-design/images-repo/master/Elysia/image-20221023224124661.png)
+![image-20221023224124661](E:\GitBook\Elysia\images\gitbook\image-20221023224124661.png)
 
 #### 2.2.5 设置书名、作者、描述、语言等
 

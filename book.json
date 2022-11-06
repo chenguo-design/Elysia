@@ -18,8 +18,5 @@
         "sidebar": {
             "本书github站点": "https://github.com/chenguo-design/Elysia"
         }
-    },
-    "styles":{
-        "website":"./styles/elysia-common.css"
     }
 }

@@ -1,4 +1,4 @@
-# Typora获取及使用
+# Typora使用文档
 
 ## 1. Typora获取
 
@@ -19,7 +19,7 @@ Typora安装包关注公众号`星辰之行`回复`Typora`即可获取。
 ```
 效果如下：
 
-### ![](https://raw.githubusercontent.com/chenguo-design/images-repo/master/Elysia/image-20221025234548427.png)
+### ![image-20221025234548427](E:\GitBook\Elysia\images\typora\image-20221025234548427.png)
 
 **有序序列表**: 数字 + 空格 + 内容，输入以下内容:
 
@@ -95,6 +95,7 @@ Typora安装包关注公众号`星辰之行`回复`Typora`即可获取。
 
 ~~请升级至最新版本~~
 **下划线**： \<u>内容\</u>，输入以下内容：
+
 ```
 <u>yes,ok</u>
 ```
@@ -116,9 +117,9 @@ Typora安装包关注公众号`星辰之行`回复`Typora`即可获取。
 [www.baidu.com](www.baidu.com)
 ```
 效果如下：
-![](https://raw.githubusercontent.com/chenguo-design/images-repo/master/Elysia/image_20220930142748-16667061255784.jpg)
+![image_20220930142748-16667061255784](E:\GitBook\Elysia\images\typora\image_20220930142748-16667061255784.jpg)
 
-**表情**：表情库地址[https://apps.timwhitlock.info/emoji/tables/unicode](https://apps.timwhitlock.info/emoji/tables/unicode) , 使用时赋值该表情的Unicode到md文件中，并把Unicode值的前缀`U+`修改为`&#x`，并在后面加上`;`, 例如表情库中有一组表情，Unicode值分别为`U+1F331`、`U+1F334`、`U+1F335`、`U+1F337`、`U+1F338`、`U+1F339`。输入以下内容
+**表情**：表情库地址[https://apps.timwhitlock.info/emoji/tables/unicode](https://apps.timwhitlock.info/emoji/tables/unicode) , 使用时复制该表情的Unicode到md文件中，并把Unicode值的前缀`U+`修改为`&#x`，并在后面加上`;`, 例如表情库中有一组表情，Unicode值分别为`U+1F331`、`U+1F334`、`U+1F335`、`U+1F337`、`U+1F338`、`U+1F339`。输入以下内容
 
 ```
 &#x1F331;&#x1F334;&#x1F335;&#x1F337;&#x1F338;&#x1F339;
@@ -154,13 +155,49 @@ public class Main{
 
 ### 2.2 配套工具
 
-大家通常使用Typora都是写博客、Github，如果图片是在本地，其他人是访问不了的(某些平台支持将md文件复制进去，自动将其中的图片上传到平台)。因此，需要搭配图床使用，目前我是使用`github`作为图床，`PicGo`作为图片上传工具。
+#### 2.2.1 PicGo图床
 
-#### 2.2.1 遇到的问题
+大家通常使用Typora都是写博客、Github，如果图片是在本地，其他人是访问不了的(某些平台支持将md文件复制进去，自动将其中的图片上传到平台)。因此，需要搭配图床使用，目前我是使用`github`作为图床，`PicGo`作为图片上传工具。
 
 我在使用Typora上传图片后，图片的URL被自动转义(关闭Typora插入图片自动转义没有用)，然后转移后的URL连Typora都无法识别。
 
 *解决办法*：上传图片后不使用Typora自动转义的URL，使用PicGo上传成功后获取的图片URL，该URL没有被转义，并且PicGo已经加入到粘贴板中，因此直接`CTRL+V`即可。
 
+#### 2.2.2 pandoc
 
+微信公众号导入只支持doc和docx，可以通过下载pandoc来将markdown导出为docx格式。下面我以windows64位系统举例。
+
+1. 下载pandoc，选择64位的zip包，地址：https://github.com/jgm/pandoc/releases/tag/2.19.2 
+> 或者关注微信公众号"星辰之行",回复pandoc获取百度网盘地址
+2. 解压到电脑上指定位置
+3. typora->文件->导出->word，在弹框内将pandoc路径设置为解压文件的exe文件。
+
+### 2.3 常用设置
+
+#### 2.3.1 设置Typora图片居左
+
+* 使用的html标签
+  方法一：
+
+  增加align属性，值设置为left
+  ```java
+  <img src = "./images/mypic.png" align="left">
+  ```
+  方法二：
+  打开偏好设置，选择左边外观标签，滑倒最下，选择打开主题文件夹。
+
+![image-20221029183344226](E:\GitBook\Elysia\images\typora\image-20221029183344226.png)
+
+打开对应的css文件(例如我的主题是Github主题，则打开github.css文件)，在文件的最后加上：
+
+```java
+/*设置图片居左设置*/
+p .md-image:only-child{
+    width: auto;
+    text-align: left;
+}
+```
+* 使用的markdown命令
+直接在整个插入图片的markdown命令后再输入一个空格
+> 对，就是这么简单，最后再加一个空格
 
