@@ -276,7 +276,3 @@ maven的有默认的maven-dependency-plugin插件，执行maven的compile会编�
 弹出如下弹框，如果没有bootstrap.yml，则加入进去。最后确认bootstrap.yml被勾选
 
 ![image-20221031112536548](E:\GitBook\Elysia\images\idea\image-20221031112536548.png)
-
-<img src="E:\GitBook\Elysia\images\idea\image-20221026224018489.png" alt="image-20221026224018489">
-
-<img src="E:\GitBook\Elysia\images\idea\image-20221010191800393.png" alt="image-20221023220033498">
